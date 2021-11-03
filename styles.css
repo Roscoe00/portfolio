@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+.frontPage {
+  background-image: linear-gradient(rgba(54, 54, 54, 0.65), rgba(54, 54, 54, 0.65)), url(./sass/city.jpg);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 5px solid #E5DAAF;
+}
+nav #links {
+  display: none;
+}
+nav .sub__heading,
+nav .menu > a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #E5DAAF;
+}
+nav .sub__heading {
+  font-size: 3rem;
+  margin: 10px 15px;
+  font-family: "Work Sans";
+}
+nav .menu > a {
+  font-size: 4.8rem;
+  padding: 5px 15px;
+  margin: 2px;
+}
+
+#header {
+  padding: 60px 11% 120px;
+  display: grid;
+  grid-template-areas: "intro" "arrow-d";
+  gap: 80px;
+  margin: auto;
+  max-width: 354px;
+}
+#header a {
+  grid-area: arrow-d;
+  text-align: center;
+}
+#header a .down {
+  font-size: 8rem;
+}
+#header .header__h1 {
+  font-weight: 500;
+  font-family: "Work Sans";
+  color: #E5DAAF;
+  grid-area: intro;
+}
+#header .header__h1 .header__break {
+  color: #E5DAAF;
+}
+#header .header__h1 .header__name {
+  color: #F77F00;
+}
+#header .header__h1 .down {
+  font-size: 8rem;
+  color: #F77F00;
+}
+#header .header-scroll {
+  color: #001C2B;
+  background-color: #F77F00;
+  display: block;
+  padding: 10px 20px;
+  margin: auto;
+  font-weight: 400;
+  font-family: "Bitter";
+}
+
+main {
+  background-color: #001C2B;
+}
+main .main__heading {
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 4rem;
+  font-weight: 500;
+  color: #F77F00;
+  border-top: 5px solid #E5DAAF;
+  margin: 10%;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.block {
+  height: 40px;
+}
+
+.about {
+  margin-top: 0;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-areas: "aDesc" "aImage";
+  margin: 0 10%;
+  gap: 20px;
+}
+.about__grid .about__image {
+  background-color: #E5DAAF;
+  height: 250px;
+  margin: auto;
+  grid-area: aImage;
+}
+.about__grid .about__paragraph {
+  color: #E5DAAF;
+  grid-area: aDesc;
+  font-size: 1.8rem;
+}
+
+#experience__grid {
+  display: grid;
+  grid-template-areas: "html  css js";
+  text-align: center;
+  padding-top: 20px;
+  gap: 5px;
+  height: 500px;
+}
+#experience__grid * {
+  color: #F77F00;
+  font-size: 5.6rem;
+}
+#experience__grid :nth-child(3n+2) {
+  border-left: 5px solid #E5DAAF;
+  border-right: 5px solid #E5DAAF;
+}
+#experience__grid .experience__html {
+  grid-area: html;
+}
+#experience__grid .experience__css {
+  grid-area: css;
+}
+#experience__grid .experience__js {
+  grid-area: js;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-areas: "pImage  pImage pImage" "arrowL tHead arrowR" "pDesc pDesc pDesc";
+  text-align: center;
+  gap: 20px;
+  margin: 0 10%;
+}
+.projects__grid .projects__image {
+  background-color: #E5DAAF;
+  height: 250px;
+  margin: auto;
+  grid-area: pImage;
+}
+.projects__grid * {
+  font-size: 5.6rem;
+}
+.projects__grid .arrow-l {
+  grid-area: arrowL;
+}
+.projects__grid .arrow-r {
+  grid-area: arrowR;
+}
+.projects__grid .tertiary__heading {
+  font-size: 3rem;
+  color: #E5DAAF;
+  grid-area: tHead;
+}
+.projects__grid .projects__arrow {
+  color: #F77F00;
+  font-family: "Bitter";
+  text-decoration: none;
+  font-weight: 100px;
+}
+.projects__grid .project__description {
+  font-size: 1.8rem;
+  font-family: "Bitter";
+  color: #E5DAAF;
+  grid-area: pDesc;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-areas: "mailIcon mailIcon" "email email" "cv linkedin" "github github";
+  text-align: center;
+  gap: 50px;
+  margin: auto;
+  margin: 0 10%;
+  padding-bottom: 60px;
+}
+.contact__grid * {
+  color: #F77F00;
+  font-size: 5.6rem;
+}
+.contact__grid .contact__email {
+  font-family: "Bitter";
+  color: #E5DAAF;
+  font-size: 2rem;
+  grid-area: email;
+  padding: 0px 0 50px;
+  border-bottom: 5px solid #E5DAAF;
+  margin: 0 5%;
+}
+.contact__grid .contact__mailIcon {
+  grid-area: mailIcon;
+}
+.contact__grid .contact__cv {
+  grid-area: cv;
+}
+.contact__grid .contact__linkedin {
+  grid-area: linkedin;
+}
+.contact__grid .contact__github {
+  grid-area: github;
+}
+
+#footer {
+  background-image: linear-gradient(rgba(54, 54, 54, 0.65), rgba(54, 54, 54, 0.65)), url(./sass/city.jpg);
+  height: 80px;
+}
+#footer .copyright {
+  color: #E5DAAF;
+  font-family: "Bitter";
+  font-size: 2rem;
+}

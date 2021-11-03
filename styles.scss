@@ -1,0 +1,298 @@
+@import "./sass/variables";
+@import "./sass/typography";
+
+* {
+   margin: 0;
+   padding: 0;
+   font-size: 10px;
+}
+
+.frontPage {
+   background-image: linear-gradient($tertiaryBackColor, $tertiaryBackColor), url(./sass/city.jpg);
+
+}
+
+nav {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-end;
+   border-bottom: 5px solid $secondaryFontColor;
+
+   #links {
+      display: none;
+   }
+
+   .sub__heading,
+   .menu>a {
+      font-weight: 500;
+      text-decoration: none;
+      color: $secondaryFontColor;
+   }
+
+   .sub__heading {
+      font-size: 3rem;
+      margin: 10px 15px;
+      font-family: $primaryFont;
+   }
+
+   .menu>a {
+      font-size: 4.8rem;
+      padding: 5px 15px;
+      margin: 2px;
+   }
+
+}
+
+#header {
+   padding: 60px 11% 120px;
+   display: grid;
+   grid-template-areas:
+      "intro"
+      "arrow-d";
+   gap: 80px;
+   margin: auto;
+   max-width: 354px;
+   // * {
+   //    font-size: 5rem;
+   //    color: $primaryFontColor;
+   // }
+   a{
+      grid-area: arrow-d;
+      text-align: center;
+      .down {
+      font-size: 8rem;
+      }
+   }
+   
+   .header__h1 {
+      font-weight: 500;
+      font-family: $primaryFont;
+      color: $secondaryFontColor;
+      grid-area: intro;
+      .header__break {
+         color: $secondaryFontColor;
+      }
+      .header__name {
+         color: $primaryFontColor;
+      }
+      .down {
+         font-size: 8rem;
+         color: $primaryFontColor;
+      }
+
+   }
+
+   .header-scroll {
+      color: $primaryBackColor;
+      background-color: $primaryFontColor;
+      display: block;
+      padding: 10px 20px;
+      margin: auto;
+      font-weight: 400;
+      font-family: $secondaryFont;
+
+   }
+}
+
+
+// .arrow-d:hover {
+//    color: #f1ff5c ;
+//    box-shadow: 0 -2rem 1.2rem 0.6rem  #f1ff5c ;
+// }
+
+
+main {
+   background-color: $primaryBackColor;
+
+   .main__heading {
+      text-align: center;
+      font-family: $primaryFont;
+      font-size: 4rem;
+      font-weight: 500;
+      color: $primaryFontColor;
+      border-top: 5px solid $secondaryFontColor;
+      margin: 10%;
+      margin-top: 40px;
+      padding-top: 20px;
+   }
+}
+
+.block {
+   height: 40px;
+}
+
+.about {
+   margin-top: 0;
+}
+
+.about__grid {
+   display: grid;
+   grid-template-areas:
+      "aDesc"
+      "aImage";
+   margin: 0 10%;
+   gap: 20px;
+
+   .about__image {
+      background-color: $secondaryFontColor;
+      height: 250px;
+      margin: auto;
+      grid-area: aImage;
+   }
+
+
+   .about__paragraph {
+      color: $secondaryFontColor;
+      grid-area: aDesc;
+      font-size: 1.8rem;
+   }
+}
+
+#experience__grid {
+   display: grid;
+   grid-template-areas:
+      "html  css js";
+   text-align: center;
+   padding-top: 20px;
+   gap: 5px;
+   height: 500px;
+
+   * {
+      color: $primaryFontColor;
+      font-size: 5.6rem;
+   }
+
+   :nth-child(3n+2) {
+      border-left: 5px solid $secondaryFontColor;
+      border-right: 5px solid $secondaryFontColor;
+   }
+
+   .experience__html {
+      grid-area: html;
+   }
+
+   .experience__css {
+      grid-area: css;
+   }
+
+   .experience__js {
+      grid-area: js;
+   }
+}
+
+.projects__grid {
+   display: grid;
+   grid-template-areas:
+      "pImage  pImage pImage"
+      "arrowL tHead arrowR"
+      "pDesc pDesc pDesc";
+   text-align: center;
+   gap: 20px;
+   margin: 0 10%;
+
+   .projects__image {
+      background-color: $secondaryFontColor;
+      height: 250px;
+      margin: auto;
+      grid-area: pImage;
+
+   }
+
+   * {
+      font-size: 5.6rem;
+   }
+
+   .arrow-l {
+      grid-area: arrowL;
+   }
+
+   .arrow-r {
+      grid-area: arrowR;
+   }
+
+   .tertiary__heading {
+      font-size: 3rem;
+      color: $secondaryFontColor;
+      grid-area: tHead;
+   }
+
+   .projects__arrow {
+      color: $primaryFontColor;
+      font-family: $secondaryFont;
+      text-decoration: none;
+      font-weight: 100px;
+   }
+
+   .project__description {
+      font-size: 1.8rem;
+      font-family: $secondaryFont;
+      color: $secondaryFontColor;
+      grid-area: pDesc;
+   }
+
+}
+
+.contact__grid {
+   display: grid;
+   grid-template-areas:
+      "mailIcon mailIcon"
+      "email email"
+      "cv linkedin"
+      "github github";
+   text-align: center;
+   gap: 50px;
+   margin: auto;
+   margin: 0 10%;
+   padding-bottom: 60px;
+
+   * {
+      color: $primaryFontColor;
+      font-size: 5.6rem;
+   }
+   .contact__email {
+      font-family: $secondaryFont;
+      color: $secondaryFontColor;
+      font-size: 2rem;
+      grid-area: email;
+      padding: 0px 0 50px;
+      border-bottom: 5px solid $secondaryFontColor;
+      margin: 0 5%;
+   }
+
+   .contact__mailIcon {
+      grid-area: mailIcon;
+   }
+
+   .contact__cv {
+      grid-area: cv;
+   }
+
+   .contact__linkedin {
+      grid-area: linkedin;
+   }
+
+   .contact__github {
+      grid-area: github;
+   }
+}
+
+#footer {
+   background-image: linear-gradient($tertiaryBackColor, $tertiaryBackColor), url(./sass/city.jpg);
+   height: 80px;
+
+   .copyright {
+      color: $secondaryFontColor;
+      font-family: $secondaryFont;
+      font-size: 2rem;
+   }
+}
+
+
+
+// in media tag make .header__break an inline block
+
+// phone width 320px
+// ipad width 768px 
+// Desktop 1024px
+//do break point at 540 and 768
