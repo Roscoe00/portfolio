@@ -1,5 +1,6 @@
 @import "./sass/variables";
 @import "./sass/typography";
+@import "./sass/hover";
 
 * {
    margin: 0;
@@ -44,7 +45,7 @@ nav {
 
 }
 
-#header {
+.header {
    padding: 60px 11% 120px;
    display: grid;
    grid-template-areas:
@@ -53,53 +54,53 @@ nav {
    gap: 80px;
    margin: auto;
    max-width: 354px;
-   // * {
-   //    font-size: 5rem;
-   //    color: $primaryFontColor;
-   // }
-   a{
+
+   * {
+      font-size: 5rem;
+      color: $primaryFontColor;
+   }
+
+   a {
       grid-area: arrow-d;
       text-align: center;
-      .down {
-      font-size: 8rem;
-      }
-   }
-   
-   .header__h1 {
-      font-weight: 500;
-      font-family: $primaryFont;
-      color: $secondaryFontColor;
-      grid-area: intro;
-      .header__break {
-         color: $secondaryFontColor;
-      }
-      .header__name {
-         color: $primaryFontColor;
-      }
-      .down {
-         font-size: 8rem;
-         color: $primaryFontColor;
-      }
-
    }
 
-   .header-scroll {
-      color: $primaryBackColor;
-      background-color: $primaryFontColor;
-      display: block;
-      padding: 10px 20px;
-      margin: auto;
-      font-weight: 400;
-      font-family: $secondaryFont;
-
-   }
 }
 
 
-// .arrow-d:hover {
-//    color: #f1ff5c ;
-//    box-shadow: 0 -2rem 1.2rem 0.6rem  #f1ff5c ;
-// }
+.header__h1 {
+   font-weight: 500;
+   font-family: $primaryFont;
+   color: $secondaryFontColor;
+   grid-area: intro;
+
+   .header__break {
+      color: $secondaryFontColor;
+   }
+
+   .header__name {
+      color: $primaryFontColor;
+   }
+
+
+
+}
+
+
+.header-scroll {
+   color: $primaryBackColor;
+   background-color: $primaryFontColor;
+   display: block;
+   padding: 10px 20px;
+   margin: auto;
+   font-weight: 400;
+   font-family: $secondaryFont;
+
+}
+
+
+
+
 
 
 main {
@@ -152,15 +153,15 @@ main {
 #experience__grid {
    display: grid;
    grid-template-areas:
-      "html  css js";
+      "html  css js"
+      "sass boot node";
    text-align: center;
    padding-top: 20px;
-   gap: 5px;
-   height: 500px;
+   height: 50rem;
 
    * {
       color: $primaryFontColor;
-      font-size: 5.6rem;
+      font-size: 5rem;
    }
 
    :nth-child(3n+2) {
@@ -178,6 +179,15 @@ main {
 
    .experience__js {
       grid-area: js;
+   }
+   .experience__sass {
+      grid-area: sass;
+   }
+   .experience__boot {
+      grid-area: boot;
+   }
+   .experience__node {
+      grid-area: node;
    }
 }
 
@@ -199,10 +209,6 @@ main {
 
    }
 
-   * {
-      font-size: 5.6rem;
-   }
-
    .arrow-l {
       grid-area: arrowL;
    }
@@ -217,20 +223,21 @@ main {
       grid-area: tHead;
    }
 
-   .projects__arrow {
-      color: $primaryFontColor;
-      font-family: $secondaryFont;
-      text-decoration: none;
-      font-weight: 100px;
-   }
-
    .project__description {
       font-size: 1.8rem;
       font-family: $secondaryFont;
       color: $secondaryFontColor;
       grid-area: pDesc;
    }
+}
 
+
+.arrow__r:hover {
+   transform: translateX(0.2rem);
+   transition: transform 0.2s;
+}
+.hide {
+   display: none;
 }
 
 .contact__grid {
@@ -248,8 +255,9 @@ main {
 
    * {
       color: $primaryFontColor;
-      font-size: 5.6rem;
+      font-size: 5rem;
    }
+
    .contact__email {
       font-family: $secondaryFont;
       color: $secondaryFontColor;
@@ -290,7 +298,36 @@ main {
 
 
 
-// in media tag make .header__break an inline block
+// try to make "I'm" start a new line
+@media screen and (min-width:768px) {
+   * {
+      font-size: 15px;
+   }
+
+   nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 5px solid $secondaryFontColor;
+   
+      #links {
+         display: flex;
+         span>a {
+         margin-right: 1rem;
+         text-decoration: none;
+         font-size: 1.5rem;
+         font-family: $primaryFont;
+         color: $secondaryFontColor;
+      }
+   }
+      .menu>a {
+         display: none;
+      }
+   }
+}
+
+
 
 // phone width 320px
 // ipad width 768px 

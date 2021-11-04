@@ -1,0 +1,45 @@
+@import "./variables";
+
+a {
+   text-decoration: none;
+   .arrow {
+   color: $primaryFontColor;
+   }
+   .arrow:hover {
+   color: $secondaryFontColor;   
+   }
+}
+
+
+.arrow__H {
+   font-size: 5rem;
+   border: 0.6rem solid $primaryFontColor;
+}
+.arrow__H:hover {
+   transform: translateY(0.3rem);
+   border: 0.6rem solid $secondaryFontColor;
+   box-shadow: 0 0 1rem 0.6rem  $secondaryFontColor;
+   transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
+
+.arrow__P{
+   font-size: 3rem;
+   border: 0.36rem solid $primaryFontColor;
+   
+   transition: color 0.2s, border 0.2s ;
+}
+
+.arrow__l:hover {
+   box-shadow: 0 0 0.65rem 0.2rem  $secondaryFontColor;
+   border: 0.3rem solid $secondaryFontColor;
+   transform: translateX(-0.2rem);
+   transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.arrow__r:hover {
+   border: 0.3rem solid $secondaryFontColor;
+   box-shadow: 0 0 1rem 0.3rem  $secondaryFontColor;
+   transform: translateX(0.2rem);
+   transition: color 0.2s, border 0.2s, transform 0.2s;
+}

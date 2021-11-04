@@ -1,3 +1,45 @@
+a {
+  text-decoration: none;
+}
+a .arrow {
+  color: #F77F00;
+}
+a .arrow:hover {
+  color: #E5DAAF;
+}
+
+.arrow__H {
+  font-size: 5rem;
+  border: 0.6rem solid #F77F00;
+}
+
+.arrow__H:hover {
+  transform: translateY(0.3rem);
+  border: 0.6rem solid #E5DAAF;
+  box-shadow: 0 0 1rem 0.6rem #E5DAAF;
+  transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.arrow__P {
+  font-size: 3rem;
+  border: 0.36rem solid #F77F00;
+  transition: color 0.2s, border 0.2s;
+}
+
+.arrow__l:hover {
+  box-shadow: 0 0 0.65rem 0.2rem #E5DAAF;
+  border: 0.3rem solid #E5DAAF;
+  transform: translateX(-0.2rem);
+  transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.arrow__r:hover {
+  border: 0.3rem solid #E5DAAF;
+  box-shadow: 0 0 1rem 0.3rem #E5DAAF;
+  transform: translateX(0.2rem);
+  transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +77,7 @@ nav .menu > a {
   margin: 2px;
 }
 
-#header {
+.header {
   padding: 60px 11% 120px;
   display: grid;
   grid-template-areas: "intro" "arrow-d";
@@ -43,30 +85,29 @@ nav .menu > a {
   margin: auto;
   max-width: 354px;
 }
-#header a {
+.header * {
+  font-size: 5rem;
+  color: #F77F00;
+}
+.header a {
   grid-area: arrow-d;
   text-align: center;
 }
-#header a .down {
-  font-size: 8rem;
-}
-#header .header__h1 {
+
+.header__h1 {
   font-weight: 500;
   font-family: "Work Sans";
   color: #E5DAAF;
   grid-area: intro;
 }
-#header .header__h1 .header__break {
+.header__h1 .header__break {
   color: #E5DAAF;
 }
-#header .header__h1 .header__name {
+.header__h1 .header__name {
   color: #F77F00;
 }
-#header .header__h1 .down {
-  font-size: 8rem;
-  color: #F77F00;
-}
-#header .header-scroll {
+
+.header-scroll {
   color: #001C2B;
   background-color: #F77F00;
   display: block;
@@ -119,15 +160,14 @@ main .main__heading {
 
 #experience__grid {
   display: grid;
-  grid-template-areas: "html  css js";
+  grid-template-areas: "html  css js" "sass boot node";
   text-align: center;
   padding-top: 20px;
-  gap: 5px;
-  height: 500px;
+  height: 50rem;
 }
 #experience__grid * {
   color: #F77F00;
-  font-size: 5.6rem;
+  font-size: 5rem;
 }
 #experience__grid :nth-child(3n+2) {
   border-left: 5px solid #E5DAAF;
@@ -141,6 +181,15 @@ main .main__heading {
 }
 #experience__grid .experience__js {
   grid-area: js;
+}
+#experience__grid .experience__sass {
+  grid-area: sass;
+}
+#experience__grid .experience__boot {
+  grid-area: boot;
+}
+#experience__grid .experience__node {
+  grid-area: node;
 }
 
 .projects__grid {
@@ -156,9 +205,6 @@ main .main__heading {
   margin: auto;
   grid-area: pImage;
 }
-.projects__grid * {
-  font-size: 5.6rem;
-}
 .projects__grid .arrow-l {
   grid-area: arrowL;
 }
@@ -170,17 +216,20 @@ main .main__heading {
   color: #E5DAAF;
   grid-area: tHead;
 }
-.projects__grid .projects__arrow {
-  color: #F77F00;
-  font-family: "Bitter";
-  text-decoration: none;
-  font-weight: 100px;
-}
 .projects__grid .project__description {
   font-size: 1.8rem;
   font-family: "Bitter";
   color: #E5DAAF;
   grid-area: pDesc;
+}
+
+.arrow__r:hover {
+  transform: translateX(0.2rem);
+  transition: transform 0.2s;
+}
+
+.hide {
+  display: none;
 }
 
 .contact__grid {
@@ -194,7 +243,7 @@ main .main__heading {
 }
 .contact__grid * {
   color: #F77F00;
-  font-size: 5.6rem;
+  font-size: 5rem;
 }
 .contact__grid .contact__email {
   font-family: "Bitter";
@@ -226,4 +275,31 @@ main .main__heading {
   color: #E5DAAF;
   font-family: "Bitter";
   font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  * {
+    font-size: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #E5DAAF;
+  }
+  nav #links {
+    display: flex;
+  }
+  nav #links span > a {
+    margin-right: 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Work Sans";
+    color: #E5DAAF;
+  }
+  nav .menu > a {
+    display: none;
+  }
 }
