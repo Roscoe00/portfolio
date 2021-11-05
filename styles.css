@@ -107,16 +107,6 @@ nav .menu > a {
   color: #F77F00;
 }
 
-.header-scroll {
-  color: #001C2B;
-  background-color: #F77F00;
-  display: block;
-  padding: 10px 20px;
-  margin: auto;
-  font-weight: 400;
-  font-family: "Bitter";
-}
-
 main {
   background-color: #001C2B;
 }
@@ -136,13 +126,9 @@ main .main__heading {
   height: 40px;
 }
 
-.about {
-  margin-top: 0;
-}
-
 .about__grid {
   display: grid;
-  grid-template-areas: "aDesc" "aImage";
+  grid-template-areas: "aDesc1" "aDesc2" "aImage";
   margin: 0 10%;
   gap: 20px;
 }
@@ -154,8 +140,13 @@ main .main__heading {
 }
 .about__grid .about__paragraph {
   color: #E5DAAF;
-  grid-area: aDesc;
   font-size: 1.8rem;
+}
+.about__grid .paragraph__one {
+  grid-area: aDesc1;
+}
+.about__grid .paragraph__two {
+  grid-area: aDesc2;
 }
 
 #experience__grid {
@@ -203,6 +194,16 @@ main .main__heading {
   background-color: #E5DAAF;
   height: 250px;
   margin: auto;
+}
+.projects__grid .tertiary__heading {
+  font-family: "Bitter";
+  color: #E5DAAF;
+}
+.projects__grid .project__description {
+  font-family: "Bitter";
+  color: #E5DAAF;
+}
+.projects__grid #image__1 {
   grid-area: pImage;
 }
 .projects__grid .arrow-l {
@@ -211,7 +212,7 @@ main .main__heading {
 .projects__grid .arrow-r {
   grid-area: arrowR;
 }
-.projects__grid .tertiary__heading {
+.projects__grid #tertiary__1 {
   font-size: 3rem;
   color: #E5DAAF;
   grid-area: tHead;
@@ -220,6 +221,10 @@ main .main__heading {
   font-size: 1.8rem;
   font-family: "Bitter";
   color: #E5DAAF;
+  grid-area: pDesc;
+}
+.projects__grid #description__1 {
+  font-size: 1.8rem;
   grid-area: pDesc;
 }
 
@@ -300,6 +305,154 @@ main .main__heading {
     color: #E5DAAF;
   }
   nav .menu > a {
+    display: none;
+  }
+
+  .header {
+    max-width: 400px;
+  }
+
+  main .main__heading {
+    font-size: 3.2rem;
+    font-weight: 500;
+    border-top: 5px solid #E5DAAF;
+    margin: 80px 10% 40px;
+    padding-top: 40px;
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-areas: "aImage aDesc1" "aDesc2 aDesc2";
+    margin: 0 10%;
+    gap: 80px;
+  }
+
+  .about__paragraph {
+    color: #E5DAAF;
+    font-size: 1.4rem;
+  }
+
+  .paragraph__one {
+    grid-area: aDesc1;
+  }
+
+  .paragraph__two {
+    grid-area: aDesc2;
+  }
+
+  .projects__grid {
+    display: grid;
+    grid-template-areas: "arrowL pImage pImage2 arrowR" ". tHead tHead2 ." ". pDesc pDesc2 .";
+    text-align: left;
+    gap: 20px;
+    margin: 0 5%;
+  }
+  .projects__grid .arrow__P {
+    margin: 100px 0 auto;
+  }
+  .projects__grid #image__2 {
+    grid-area: pImage2;
+  }
+  .projects__grid #tertiary__1 {
+    font-size: 3rem;
+  }
+  .projects__grid #tertiary__2 {
+    font-size: 3rem;
+    grid-area: tHead2;
+  }
+  .projects__grid #description__1 {
+    font-size: 1.1rem;
+  }
+  .projects__grid #description__2 {
+    font-size: 1.1rem;
+    grid-area: pDesc2;
+  }
+
+  .hide {
+    display: flex;
+  }
+
+  .hide2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  * {
+    font-size: 20px;
+  }
+
+  .header {
+    max-width: 600px;
+  }
+
+  main .main__heading {
+    font-size: 3.2rem;
+    font-weight: 500;
+    border-top: 5px solid #E5DAAF;
+    margin: 200px 10% 60px;
+    padding-top: 60px;
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-areas: "aImage aDesc1" "aImage aDesc2";
+    margin: 0 10%;
+  }
+  .about__grid .about__image {
+    background-color: #E5DAAF;
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    grid-area: aImage;
+  }
+  .about__grid .about__paragraph {
+    color: #E5DAAF;
+    font-size: 1.4rem;
+  }
+
+  .projects__grid {
+    display: grid;
+    grid-template-areas: "arrowL pImage pImage2 pImage3 arrowR" ". tHead tHead2 tHead3." ". pDesc pDesc2 pDesc3 .";
+    text-align: left;
+    gap: 20px;
+    margin: 0 5%;
+  }
+  .projects__grid .arrow__P {
+    margin: 100px 0 auto;
+  }
+  .projects__grid #image__3 {
+    grid-area: pImage3;
+  }
+  .projects__grid #tertiary__1 {
+    font-size: 2rem;
+  }
+  .projects__grid #tertiary__2 {
+    font-size: 2rem;
+  }
+  .projects__grid #tertiary__3 {
+    font-size: 2rem;
+    grid-area: tHead3;
+  }
+  .projects__grid #description__1 {
+    font-size: 1rem;
+  }
+  .projects__grid #description__2 {
+    font-size: 1rem;
+  }
+  .projects__grid #description__3 {
+    font-size: 1rem;
+    grid-area: pDesc3;
+  }
+
+  .hide {
+    display: flex;
+  }
+
+  .hide2 {
+    display: flex;
+  }
+
+  .hide3 {
     display: none;
   }
 }
