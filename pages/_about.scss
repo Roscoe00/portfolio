@@ -1,0 +1,36 @@
+@import "../sass/typography";
+@import "../sass/variables";
+
+.block {
+   height: 40px;
+}
+
+
+.about__grid {
+   display: grid;
+   grid-template-areas:
+      "aDesc1"
+      "aDesc2"
+      "aImage";
+   margin: 0 10%;
+   gap: 20px;
+
+   .about__image {
+      background-color: $secondaryFontColor;
+      height: 250px;
+      margin: auto;
+      grid-area: aImage;
+   }
+
+   .about__paragraph {
+      color: $secondaryFontColor;
+      font-size: 1.8rem;
+   }
+
+   .paragraph__one {
+      grid-area: aDesc1;
+   }
+   .paragraph__two {
+      grid-area: aDesc2;
+   }
+}

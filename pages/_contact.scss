@@ -1,0 +1,49 @@
+@import "../sass/typography";
+@import "../sass/variables";
+// @import "../sass/hover";
+
+
+.contact__grid {
+   display: grid;
+   grid-template-areas:
+      "mailIcon mailIcon"
+      "email email"
+      "cv linkedin"
+      "github github";
+   text-align: center;
+   gap: 50px;
+   margin: auto;
+   margin: 0 10%;
+   padding-bottom: 60px;
+
+   * {
+      color: $primaryFontColor;
+      font-size: 5rem;
+   }
+
+   .contact__email {
+      font-family: $secondaryFont;
+      color: $secondaryFontColor;
+      font-size: 2rem;
+      grid-area: email;
+      padding: 0px 0 50px;
+      border-bottom: 5px solid $secondaryFontColor;
+      margin: 0 5%;
+   }
+
+   .contact__mailIcon {
+      grid-area: mailIcon;
+   }
+
+   .contact__cv {
+      grid-area: cv;
+   }
+
+   .contact__linkedin {
+      grid-area: linkedin;
+   }
+
+   .contact__github {
+      grid-area: github;
+   }
+}

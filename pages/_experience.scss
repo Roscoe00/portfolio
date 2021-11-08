@@ -1,0 +1,43 @@
+@import "../sass/typography";
+@import "../sass/variables";
+
+#experience__grid {
+   display: grid;
+   grid-template-areas:
+      "html  css js"
+      "sass boot node";
+   text-align: center;
+   padding-top: 20px;
+   height: 50rem;
+
+   * {
+      color: $primaryFontColor;
+      font-size: 5rem;
+   }
+
+   :nth-child(3n+2) {
+      border-left: 5px solid $secondaryFontColor;
+      border-right: 5px solid $secondaryFontColor;
+   }
+
+   .experience__html {
+      grid-area: html;
+   }
+
+   .experience__css {
+      grid-area: css;
+   }
+
+   .experience__js {
+      grid-area: js;
+   }
+   .experience__sass {
+      grid-area: sass;
+   }
+   .experience__boot {
+      grid-area: boot;
+   }
+   .experience__node {
+      grid-area: node;
+   }
+}

@@ -1,0 +1,14 @@
+@import "../sass/variables";
+@import "../sass/typography";
+
+
+#footer {
+   background-image: linear-gradient($tertiaryBackColor, $tertiaryBackColor), url(./sass/city.jpg);
+   height: 80px;
+
+   .copyright {
+      color: $secondaryFontColor;
+      font-family: $secondaryFont;
+      font-size: 2rem;
+   }
+}

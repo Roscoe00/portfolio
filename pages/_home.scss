@@ -1,0 +1,41 @@
+@import "../sass/typography";
+@import "../sass/variables";
+@import "../sass/hover";
+
+.header {
+   padding: 60px 11% 120px;
+   display: grid;
+   grid-template-areas:
+      "intro"
+      "arrow-d";
+   gap: 80px;
+   margin: auto;
+   max-width: 354px;
+
+   * {
+      font-size: 5rem;
+      color: $primaryFontColor;
+   }
+
+   a {
+      grid-area: arrow-d;
+      text-align: center;
+   }
+
+}
+
+
+.header__h1 {
+   font-weight: 500;
+   font-family: $primaryFont;
+   color: $secondaryFontColor;
+   grid-area: intro;
+
+   .header__break {
+      color: $secondaryFontColor;
+   }
+
+   .header__name {
+      color: $primaryFontColor;
+   }
+}

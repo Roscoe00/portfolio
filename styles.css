@@ -26,6 +26,20 @@ a .arrow:hover {
   transition: color 0.2s, border 0.2s;
 }
 
+.arrow-l, .arrow-r {
+  width: 3.5rem;
+}
+
+.arrow-l {
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.arrow-r {
+  margin-right: auto;
+  margin-left: 1rem;
+}
+
 .arrow__l:hover {
   box-shadow: 0 0 0.65rem 0.2rem #E5DAAF;
   border: 0.3rem solid #E5DAAF;
@@ -38,16 +52,6 @@ a .arrow:hover {
   box-shadow: 0 0 1rem 0.3rem #E5DAAF;
   transform: translateX(0.2rem);
   transition: color 0.2s, border 0.2s, transform 0.2s;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-}
-
-.frontPage {
-  background-image: linear-gradient(rgba(54, 54, 54, 0.65), rgba(54, 54, 54, 0.65)), url(./sass/city.jpg);
 }
 
 nav {
@@ -75,6 +79,62 @@ nav .menu > a {
   font-size: 4.8rem;
   padding: 5px 15px;
   margin: 2px;
+}
+
+a {
+  text-decoration: none;
+}
+a .arrow {
+  color: #F77F00;
+}
+a .arrow:hover {
+  color: #E5DAAF;
+}
+
+.arrow__H {
+  font-size: 5rem;
+  border: 0.6rem solid #F77F00;
+}
+
+.arrow__H:hover {
+  transform: translateY(0.3rem);
+  border: 0.6rem solid #E5DAAF;
+  box-shadow: 0 0 1rem 0.6rem #E5DAAF;
+  transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.arrow__P {
+  font-size: 3rem;
+  border: 0.36rem solid #F77F00;
+  transition: color 0.2s, border 0.2s;
+}
+
+.arrow-l, .arrow-r {
+  width: 3.5rem;
+}
+
+.arrow-l {
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.arrow-r {
+  margin-right: auto;
+  margin-left: 1rem;
+}
+
+.arrow__l:hover {
+  box-shadow: 0 0 0.65rem 0.2rem #E5DAAF;
+  border: 0.3rem solid #E5DAAF;
+  transform: translateX(-0.2rem);
+  transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.arrow__r:hover {
+  border: 0.3rem solid #E5DAAF;
+  box-shadow: 0 0 1rem 0.3rem #E5DAAF;
+  transform: translateX(0.2rem);
+  transition: color 0.2s, border 0.2s, transform 0.2s;
 }
 
 .header {
@@ -105,21 +165,6 @@ nav .menu > a {
 }
 .header__h1 .header__name {
   color: #F77F00;
-}
-
-main {
-  background-color: #001C2B;
-}
-main .main__heading {
-  text-align: center;
-  font-family: "Work Sans";
-  font-size: 4rem;
-  font-weight: 500;
-  color: #F77F00;
-  border-top: 5px solid #E5DAAF;
-  margin: 10%;
-  margin-top: 40px;
-  padding-top: 20px;
 }
 
 .block {
@@ -183,6 +228,62 @@ main .main__heading {
   grid-area: node;
 }
 
+a {
+  text-decoration: none;
+}
+a .arrow {
+  color: #F77F00;
+}
+a .arrow:hover {
+  color: #E5DAAF;
+}
+
+.arrow__H {
+  font-size: 5rem;
+  border: 0.6rem solid #F77F00;
+}
+
+.arrow__H:hover {
+  transform: translateY(0.3rem);
+  border: 0.6rem solid #E5DAAF;
+  box-shadow: 0 0 1rem 0.6rem #E5DAAF;
+  transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.arrow__P {
+  font-size: 3rem;
+  border: 0.36rem solid #F77F00;
+  transition: color 0.2s, border 0.2s;
+}
+
+.arrow-l, .arrow-r {
+  width: 3.5rem;
+}
+
+.arrow-l {
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.arrow-r {
+  margin-right: auto;
+  margin-left: 1rem;
+}
+
+.arrow__l:hover {
+  box-shadow: 0 0 0.65rem 0.2rem #E5DAAF;
+  border: 0.3rem solid #E5DAAF;
+  transform: translateX(-0.2rem);
+  transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.arrow__r:hover {
+  border: 0.3rem solid #E5DAAF;
+  box-shadow: 0 0 1rem 0.3rem #E5DAAF;
+  transform: translateX(0.2rem);
+  transition: color 0.2s, border 0.2s, transform 0.2s;
+}
+
 .projects__grid {
   display: grid;
   grid-template-areas: "pImage  pImage pImage" "arrowL tHead arrowR" "pDesc pDesc pDesc";
@@ -228,11 +329,6 @@ main .main__heading {
   grid-area: pDesc;
 }
 
-.arrow__r:hover {
-  transform: translateX(0.2rem);
-  transition: transform 0.2s;
-}
-
 .hide {
   display: none;
 }
@@ -270,6 +366,31 @@ main .main__heading {
 }
 .contact__grid .contact__github {
   grid-area: github;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+.frontPage {
+  background-image: linear-gradient(rgba(54, 54, 54, 0.65), rgba(54, 54, 54, 0.65)), url(./sass/city.jpg);
+}
+
+main {
+  background-color: #001C2B;
+}
+main .main__heading {
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 4rem;
+  font-weight: 500;
+  color: #F77F00;
+  border-top: 5px solid #E5DAAF;
+  margin: 10%;
+  margin-top: 40px;
+  padding-top: 20px;
 }
 
 #footer {
@@ -408,6 +529,10 @@ main .main__heading {
   .about__grid .about__paragraph {
     color: #E5DAAF;
     font-size: 1.4rem;
+  }
+
+  #experience__grid {
+    margin: 0 10%;
   }
 
   .projects__grid {

@@ -26,8 +26,21 @@ a {
 .arrow__P{
    font-size: 3rem;
    border: 0.36rem solid $primaryFontColor;
-   
    transition: color 0.2s, border 0.2s ;
+}
+
+.arrow-l, .arrow-r {
+   width: 3.5rem;
+}
+
+.arrow-l {
+   margin-right: 1rem;
+   margin-left: auto;
+}
+
+.arrow-r {
+   margin-right: auto;
+   margin-left: 1rem;
 }
 
 .arrow__l:hover {
@@ -43,3 +56,4 @@ a {
    transform: translateX(0.2rem);
    transition: color 0.2s, border 0.2s, transform 0.2s;
 }
+

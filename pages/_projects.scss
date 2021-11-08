@@ -1,0 +1,63 @@
+@import "../sass/typography";
+@import "../sass/variables";
+@import "../sass/hover";
+
+.projects__grid {
+   display: grid;
+   grid-template-areas:
+      "pImage  pImage pImage"
+      "arrowL tHead arrowR"
+      "pDesc pDesc pDesc";
+   text-align: center;
+   gap: 20px;
+   margin: 0 10%;
+
+   .projects__image {
+      background-color: $secondaryFontColor;
+      height: 250px;
+      margin: auto;
+   }    
+      .tertiary__heading {
+      font-family: $secondaryFont;
+      color: $secondaryFontColor;
+   }
+      .project__description {
+         font-family: $secondaryFont;
+      color: $secondaryFontColor;
+      }
+   
+   #image__1 {
+      grid-area: pImage;
+   }
+
+   .arrow-l {
+      grid-area: arrowL;
+   }
+
+   .arrow-r {
+      grid-area: arrowR;
+   }
+  
+
+   #tertiary__1 {
+      font-size: 3rem;
+      color: $secondaryFontColor;
+      grid-area: tHead;
+   }
+
+   .project__description {
+      font-size: 1.8rem;
+      font-family: $secondaryFont;
+      color: $secondaryFontColor;
+      grid-area: pDesc;
+   }
+   #description__1 {
+      font-size: 1.8rem;
+      grid-area: pDesc;
+   }
+}
+
+
+.hide {
+   display: none;
+}
